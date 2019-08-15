@@ -6,7 +6,7 @@
 /*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 16:49:05 by lcrawn            #+#    #+#             */
-/*   Updated: 2019/04/26 16:09:07 by lcrawn           ###   ########.fr       */
+/*   Updated: 2019/04/27 17:54:02 by lcrawn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,19 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-t_list		*ft_lstnew(const char content[], int fd);
+void				ft_list_push_back(t_list **begin_list, int fd);
+t_list				*ft_lstnew(int fd);
+t_list				*ft_list_find(t_list *begin_list, int fd);
+void				ft_lstdel(t_list **begin);
+void				ft_lstdelone(t_list **begin, t_list *to_del);
 
 void				ft_list_foreach_if(t_list *begin_list,
-		void (*f)(void *),
-		void *content,
-		int (*cmp)(void *, void *));
-t_list		*ft_list_find(t_list *begin_list, int content);
-void		ft_list_push_back(t_list **begin_list, const char content[], int fd);
+		void (*f)(void *), void *content, int (*cmp)(void *, void *));
 void				ft_list_reverse(t_list **begin_list);
 char				*ft_strev(char *str);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_lstadd(t_list **alst, t_list *new);
-void				ft_lstdel(t_list **alst, void (*del)(void **));
-void				ft_lstdelone(t_list **alst, t_list *to_del, void (*del)(void **));
 int					ft_atoi(const char *str);
 void				*ft_memalloc(size_t size);
 int					ft_isalnum(int c);

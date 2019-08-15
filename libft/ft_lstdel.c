@@ -6,18 +6,18 @@
 /*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 18:20:50 by lcrawn            #+#    #+#             */
-/*   Updated: 2019/04/26 19:45:16 by lcrawn           ###   ########.fr       */
+/*   Updated: 2019/04/27 14:58:18 by lcrawn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdel(t_list **alst, void (*del)(void **))
+void	ft_lstdel(t_list **begin)
 {
-	if (*alst)
+	if (*begin)
 	{
-		del(&((*alst)->content));
-		free(*alst);
-		return ;
+		ft_memdel(&((*begin)->content));
+		free(*begin);
+		*begin = NULL;
 	}
 }

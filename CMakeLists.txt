@@ -9,6 +9,7 @@ include_directories(libft)
 add_executable(Minishell
         includes/get_next_line.h
         includes/libft.h
+        includes/minishell.h
         libft/ft_atoi.c
         libft/ft_bzero.c
         libft/ft_isalnum.c
@@ -73,4 +74,8 @@ add_executable(Minishell
         libft/ft_tolower.c
         libft/ft_toupper.c
         libft/libft.h
-        src/get_next_line.c src/main.c includes/minishell.h)
+        src/free.c
+        src/builtin.c
+        src/error.c
+        src/get_next_line.c
+        src/main.c)

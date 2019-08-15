@@ -283,6 +283,15 @@
 		<Unit filename="/home/humanbean/ecole42/Minishell/libft/libft.h">
 			<Option target="Minishell"/>
 		</Unit>
+		<Unit filename="/home/humanbean/ecole42/Minishell/src/builtin.c">
+			<Option target="Minishell"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/Minishell/src/error.c">
+			<Option target="Minishell"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/Minishell/src/free.c">
+			<Option target="Minishell"/>
+		</Unit>
 		<Unit filename="/home/humanbean/ecole42/Minishell/src/get_next_line.c">
 			<Option target="Minishell"/>
 		</Unit>

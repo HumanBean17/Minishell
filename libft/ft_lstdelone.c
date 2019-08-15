@@ -6,37 +6,37 @@
 /*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 18:21:00 by lcrawn            #+#    #+#             */
-/*   Updated: 2019/04/26 18:43:45 by lcrawn           ###   ########.fr       */
+/*   Updated: 2019/04/27 17:56:54 by lcrawn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_lstdelone(t_list **alst, t_list *to_del, void (*del)(void **))
+void	ft_lstdelone(t_list **begin, t_list *to_del)
 {
-	t_list    *tmp;
-	t_list    *cp;
+	t_list	*tmp;
+	t_list	*cp;
 
-	tmp = *alst;
+	tmp = *begin;
 	if (!tmp || !to_del)
 		return ;
 	if (tmp == to_del)
 	{
-		*alst = tmp->next;
-		ft_lstdel(&tmp, del);
+		*begin = tmp->next;
+		ft_lstdel(&tmp);
 		return ;
 	}
-	while(tmp->next != to_del)
+	while (tmp->next != to_del)
 		tmp = tmp->next;
+	cp = tmp->next;
 	if (tmp->next != NULL && (tmp->next)->next == NULL)
 	{
 		tmp->next = NULL;
-		ft_lstdel(&tmp, del);
+		ft_lstdel(&cp);
 	}
 	else
 	{
-		cp = tmp->next;
 		tmp->next = (tmp->next)->next;
-		ft_lstdel(&cp, del);
+		ft_lstdel(&cp);
 	}
 }

@@ -1824,6 +1824,87 @@ libft/ft_toupper.c.s:
 	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/libft/ft_toupper.c.s
 .PHONY : libft/ft_toupper.c.s
 
+src/builtin.o: src/builtin.c.o
+
+.PHONY : src/builtin.o
+
+# target to build an object file
+src/builtin.c.o:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/builtin.c.o
+.PHONY : src/builtin.c.o
+
+src/builtin.i: src/builtin.c.i
+
+.PHONY : src/builtin.i
+
+# target to preprocess a source file
+src/builtin.c.i:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/builtin.c.i
+.PHONY : src/builtin.c.i
+
+src/builtin.s: src/builtin.c.s
+
+.PHONY : src/builtin.s
+
+# target to generate assembly for a file
+src/builtin.c.s:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/builtin.c.s
+.PHONY : src/builtin.c.s
+
+src/error.o: src/error.c.o
+
+.PHONY : src/error.o
+
+# target to build an object file
+src/error.c.o:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/error.c.o
+.PHONY : src/error.c.o
+
+src/error.i: src/error.c.i
+
+.PHONY : src/error.i
+
+# target to preprocess a source file
+src/error.c.i:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/error.c.i
+.PHONY : src/error.c.i
+
+src/error.s: src/error.c.s
+
+.PHONY : src/error.s
+
+# target to generate assembly for a file
+src/error.c.s:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/error.c.s
+.PHONY : src/error.c.s
+
+src/free.o: src/free.c.o
+
+.PHONY : src/free.o
+
+# target to build an object file
+src/free.c.o:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/free.c.o
+.PHONY : src/free.c.o
+
+src/free.i: src/free.c.i
+
+.PHONY : src/free.i
+
+# target to preprocess a source file
+src/free.c.i:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/free.c.i
+.PHONY : src/free.c.i
+
+src/free.s: src/free.c.s
+
+.PHONY : src/free.s
+
+# target to generate assembly for a file
+src/free.c.s:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/free.c.s
+.PHONY : src/free.c.s
+
 src/get_next_line.o: src/get_next_line.c.o
 
 .PHONY : src/get_next_line.o
@@ -2076,6 +2157,15 @@ help:
 	@echo "... libft/ft_toupper.o"
 	@echo "... libft/ft_toupper.i"
 	@echo "... libft/ft_toupper.s"
+	@echo "... src/builtin.o"
+	@echo "... src/builtin.i"
+	@echo "... src/builtin.s"
+	@echo "... src/error.o"
+	@echo "... src/error.i"
+	@echo "... src/error.s"
+	@echo "... src/free.o"
+	@echo "... src/free.i"
+	@echo "... src/free.s"
 	@echo "... src/get_next_line.o"
 	@echo "... src/get_next_line.i"
 	@echo "... src/get_next_line.s"

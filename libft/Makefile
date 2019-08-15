@@ -30,8 +30,8 @@ HDR = libft.h
 all: $(NAME)
 
 $(NAME): $(SRC_O)
-		gcc -c $(SRC)
-		ar rc $(NAME) $(SRC_O)
+	gcc -Wall -Wextra -Werror -c $(SRC)
+	ar rc $(NAME) $(SRC_O)
 
 clean:
 		rm -f $(SRC_O)

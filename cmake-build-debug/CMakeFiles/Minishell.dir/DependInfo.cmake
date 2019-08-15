@@ -67,6 +67,9 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/humanbean/ecole42/Minishell/libft/ft_strtrim.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/libft/ft_strtrim.c.o"
   "/home/humanbean/ecole42/Minishell/libft/ft_tolower.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/libft/ft_tolower.c.o"
   "/home/humanbean/ecole42/Minishell/libft/ft_toupper.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/libft/ft_toupper.c.o"
+  "/home/humanbean/ecole42/Minishell/src/builtin.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/builtin.c.o"
+  "/home/humanbean/ecole42/Minishell/src/error.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/error.c.o"
+  "/home/humanbean/ecole42/Minishell/src/free.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/free.c.o"
   "/home/humanbean/ecole42/Minishell/src/get_next_line.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/get_next_line.c.o"
   "/home/humanbean/ecole42/Minishell/src/main.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/main.c.o"
   )
