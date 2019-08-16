@@ -1,5 +1,17 @@
 #include "minishell.h"
 
+void    print(char **ar)
+{
+	int i;
+
+	i = 0;
+	while (ar[i])
+	{
+		printf("%s\n", ar[i]);
+		i++;
+	}
+}
+
 void    run_process(char *command, char **argv, char **envp)
 {
 	pid_t   pid;
@@ -11,6 +23,7 @@ void    run_process(char *command, char **argv, char **envp)
 	{
 		if (execve(command, argv, envp) == -1)
 			exec_error(command);
+		kill(pid, SIGKILL);
 	}
 	else if (pid < 0)
 		ft_putstr("Error forking\n");
@@ -22,69 +35,7 @@ void    run_process(char *command, char **argv, char **envp)
 	}
 }
 
-void    split_process(char **command, char *path, char **envp)
-{
-	char *run;
-	char *fcknslash;
-
-	fcknslash = ft_strjoin("/", command[0]);
-	run = ft_strjoin(path, fcknslash);
-	ft_strdel(&fcknslash);
-	run_process(run, command, envp);
-	ft_strdel(&run);
-}
-
-int     dir_search(char *to_find, char *path)
-{
-	DIR             *dir;
-	struct dirent   *entry;
-
-	dir = opendir(path);
-	while ((entry = readdir(dir)))
-		if (!ft_strcmp(entry->d_name, to_find))
-			break ;
-	closedir(dir);
-	if (entry)
-		return (1);
-	return (0);
-}
-
-int   bin_search(char *to_find, char **path)
-{
-	int i;
-
-	i = 0;
-	while (path[i])
-	{
-		if (dir_search(to_find, path[i]))
-			return (i);
-		i++;
-	}
-	command_not_found(to_find);
-	return (-1);
-}
-
-char    **path_split(char **envp)
-{
-	int     i;
-	char    *tmp;
-	char    **path;
-
-	i = 0;
-	while (envp[i])
-	{
-		if (envp[i][0] == 'P' && envp[i][1] == 'A' &&
-		envp[i][2] == 'T' && envp[i][3] == 'H')
-			break;
-		i++;
-	}
-	tmp = ft_strsub(envp[i], 5, ft_strlen(envp[i]) - 4);
-	path = ft_strsplit(tmp, ':');
-	ft_strdel(&tmp);
-	return (path);
-}
-
-void    builtin(char **split, char **envp)
+int builtin(char **split, char **envp)
 {
 	int     i;
 	int     j;
@@ -96,11 +47,24 @@ void    builtin(char **split, char **envp)
 	while (split[i])
 	{
 		command = ft_strsplit(split[i], ' ');
-		j = bin_search(command[0], path);
-		if (j >= 0)
-			split_process(command, path[j], envp);
+		if (!command[0])
+			return (1);
+		else if (!ft_strcmp(command[0], "cd"))
+			cd(command, home_search(envp));
+		else if (!ft_strcmp(command[0], "exit"))
+			return (0);
+		else
+		{
+			percent(command, envp);
+			j = bin_search(command[0], path);
+			if (j >= 0)
+				split_process(j, command, path[j], envp);
+			else if (j == -2)
+				split_process(j, command, command[0], envp);
+		}
 		free_char_arr(command);
 		i++;
 	}
 	free_char_arr(path);
+	return (1);
 }

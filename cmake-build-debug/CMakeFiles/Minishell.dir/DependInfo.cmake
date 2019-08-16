@@ -68,10 +68,14 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/humanbean/ecole42/Minishell/libft/ft_tolower.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/libft/ft_tolower.c.o"
   "/home/humanbean/ecole42/Minishell/libft/ft_toupper.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/libft/ft_toupper.c.o"
   "/home/humanbean/ecole42/Minishell/src/builtin.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/builtin.c.o"
+  "/home/humanbean/ecole42/Minishell/src/change_dir.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/change_dir.c.o"
   "/home/humanbean/ecole42/Minishell/src/error.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/error.c.o"
   "/home/humanbean/ecole42/Minishell/src/free.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/free.c.o"
   "/home/humanbean/ecole42/Minishell/src/get_next_line.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/get_next_line.c.o"
   "/home/humanbean/ecole42/Minishell/src/main.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/main.c.o"
+  "/home/humanbean/ecole42/Minishell/src/percent.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/percent.c.o"
+  "/home/humanbean/ecole42/Minishell/src/search.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/search.c.o"
+  "/home/humanbean/ecole42/Minishell/src/split.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/split.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

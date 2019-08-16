@@ -286,6 +286,9 @@
 		<Unit filename="/home/humanbean/ecole42/Minishell/src/builtin.c">
 			<Option target="Minishell"/>
 		</Unit>
+		<Unit filename="/home/humanbean/ecole42/Minishell/src/change_dir.c">
+			<Option target="Minishell"/>
+		</Unit>
 		<Unit filename="/home/humanbean/ecole42/Minishell/src/error.c">
 			<Option target="Minishell"/>
 		</Unit>
@@ -296,6 +299,15 @@
 			<Option target="Minishell"/>
 		</Unit>
 		<Unit filename="/home/humanbean/ecole42/Minishell/src/main.c">
+			<Option target="Minishell"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/Minishell/src/percent.c">
+			<Option target="Minishell"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/Minishell/src/search.c">
+			<Option target="Minishell"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/Minishell/src/split.c">
 			<Option target="Minishell"/>
 		</Unit>
 		<Unit filename="/home/humanbean/ecole42/Minishell/CMakeLists.txt">

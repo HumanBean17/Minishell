@@ -1851,6 +1851,33 @@ src/builtin.c.s:
 	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/builtin.c.s
 .PHONY : src/builtin.c.s
 
+src/change_dir.o: src/change_dir.c.o
+
+.PHONY : src/change_dir.o
+
+# target to build an object file
+src/change_dir.c.o:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/change_dir.c.o
+.PHONY : src/change_dir.c.o
+
+src/change_dir.i: src/change_dir.c.i
+
+.PHONY : src/change_dir.i
+
+# target to preprocess a source file
+src/change_dir.c.i:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/change_dir.c.i
+.PHONY : src/change_dir.c.i
+
+src/change_dir.s: src/change_dir.c.s
+
+.PHONY : src/change_dir.s
+
+# target to generate assembly for a file
+src/change_dir.c.s:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/change_dir.c.s
+.PHONY : src/change_dir.c.s
+
 src/error.o: src/error.c.o
 
 .PHONY : src/error.o
@@ -1958,6 +1985,87 @@ src/main.s: src/main.c.s
 src/main.c.s:
 	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/main.c.s
 .PHONY : src/main.c.s
+
+src/percent.o: src/percent.c.o
+
+.PHONY : src/percent.o
+
+# target to build an object file
+src/percent.c.o:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/percent.c.o
+.PHONY : src/percent.c.o
+
+src/percent.i: src/percent.c.i
+
+.PHONY : src/percent.i
+
+# target to preprocess a source file
+src/percent.c.i:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/percent.c.i
+.PHONY : src/percent.c.i
+
+src/percent.s: src/percent.c.s
+
+.PHONY : src/percent.s
+
+# target to generate assembly for a file
+src/percent.c.s:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/percent.c.s
+.PHONY : src/percent.c.s
+
+src/search.o: src/search.c.o
+
+.PHONY : src/search.o
+
+# target to build an object file
+src/search.c.o:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/search.c.o
+.PHONY : src/search.c.o
+
+src/search.i: src/search.c.i
+
+.PHONY : src/search.i
+
+# target to preprocess a source file
+src/search.c.i:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/search.c.i
+.PHONY : src/search.c.i
+
+src/search.s: src/search.c.s
+
+.PHONY : src/search.s
+
+# target to generate assembly for a file
+src/search.c.s:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/search.c.s
+.PHONY : src/search.c.s
+
+src/split.o: src/split.c.o
+
+.PHONY : src/split.o
+
+# target to build an object file
+src/split.c.o:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/split.c.o
+.PHONY : src/split.c.o
+
+src/split.i: src/split.c.i
+
+.PHONY : src/split.i
+
+# target to preprocess a source file
+src/split.c.i:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/split.c.i
+.PHONY : src/split.c.i
+
+src/split.s: src/split.c.s
+
+.PHONY : src/split.s
+
+# target to generate assembly for a file
+src/split.c.s:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/split.c.s
+.PHONY : src/split.c.s
 
 # Help Target
 help:
@@ -2160,6 +2268,9 @@ help:
 	@echo "... src/builtin.o"
 	@echo "... src/builtin.i"
 	@echo "... src/builtin.s"
+	@echo "... src/change_dir.o"
+	@echo "... src/change_dir.i"
+	@echo "... src/change_dir.s"
 	@echo "... src/error.o"
 	@echo "... src/error.i"
 	@echo "... src/error.s"
@@ -2172,6 +2283,15 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/percent.o"
+	@echo "... src/percent.i"
+	@echo "... src/percent.s"
+	@echo "... src/search.o"
+	@echo "... src/search.i"
+	@echo "... src/search.s"
+	@echo "... src/split.o"
+	@echo "... src/split.i"
+	@echo "... src/split.s"
 .PHONY : help
 
 

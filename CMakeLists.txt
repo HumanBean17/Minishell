@@ -74,6 +74,10 @@ add_executable(Minishell
         libft/ft_tolower.c
         libft/ft_toupper.c
         libft/libft.h
+        src/split.c
+        src/change_dir.c
+        src/percent.c
+        src/search.c
         src/free.c
         src/builtin.c
         src/error.c
