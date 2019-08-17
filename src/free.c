@@ -7,6 +7,8 @@ void    free_char_arr(char **split)
 	i = 0;
 	while (split[i])
 	{
+		//ft_putstr(split[i]);
+		//write(1, "1\n", 2);
 		ft_strdel(&split[i]);
 		i++;
 	}

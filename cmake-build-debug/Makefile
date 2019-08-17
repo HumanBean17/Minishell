@@ -1878,6 +1878,33 @@ src/change_dir.c.s:
 	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/change_dir.c.s
 .PHONY : src/change_dir.c.s
 
+src/envp.o: src/envp.c.o
+
+.PHONY : src/envp.o
+
+# target to build an object file
+src/envp.c.o:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/envp.c.o
+.PHONY : src/envp.c.o
+
+src/envp.i: src/envp.c.i
+
+.PHONY : src/envp.i
+
+# target to preprocess a source file
+src/envp.c.i:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/envp.c.i
+.PHONY : src/envp.c.i
+
+src/envp.s: src/envp.c.s
+
+.PHONY : src/envp.s
+
+# target to generate assembly for a file
+src/envp.c.s:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/envp.c.s
+.PHONY : src/envp.c.s
+
 src/error.o: src/error.c.o
 
 .PHONY : src/error.o
@@ -1958,6 +1985,33 @@ src/get_next_line.s: src/get_next_line.c.s
 src/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/get_next_line.c.s
 .PHONY : src/get_next_line.c.s
+
+src/homeresonance.o: src/homeresonance.c.o
+
+.PHONY : src/homeresonance.o
+
+# target to build an object file
+src/homeresonance.c.o:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/homeresonance.c.o
+.PHONY : src/homeresonance.c.o
+
+src/homeresonance.i: src/homeresonance.c.i
+
+.PHONY : src/homeresonance.i
+
+# target to preprocess a source file
+src/homeresonance.c.i:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/homeresonance.c.i
+.PHONY : src/homeresonance.c.i
+
+src/homeresonance.s: src/homeresonance.c.s
+
+.PHONY : src/homeresonance.s
+
+# target to generate assembly for a file
+src/homeresonance.c.s:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/homeresonance.c.s
+.PHONY : src/homeresonance.c.s
 
 src/main.o: src/main.c.o
 
@@ -2271,6 +2325,9 @@ help:
 	@echo "... src/change_dir.o"
 	@echo "... src/change_dir.i"
 	@echo "... src/change_dir.s"
+	@echo "... src/envp.o"
+	@echo "... src/envp.i"
+	@echo "... src/envp.s"
 	@echo "... src/error.o"
 	@echo "... src/error.i"
 	@echo "... src/error.s"
@@ -2280,6 +2337,9 @@ help:
 	@echo "... src/get_next_line.o"
 	@echo "... src/get_next_line.i"
 	@echo "... src/get_next_line.s"
+	@echo "... src/homeresonance.o"
+	@echo "... src/homeresonance.i"
+	@echo "... src/homeresonance.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

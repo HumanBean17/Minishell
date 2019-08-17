@@ -4,7 +4,7 @@ OBJ = ./*.o
 
 HDR = -I includes/
 
-CC = gcc
+CC = gcc -g
 
 LIBFT = libft/
 

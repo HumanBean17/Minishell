@@ -289,6 +289,9 @@
 		<Unit filename="/home/humanbean/ecole42/Minishell/src/change_dir.c">
 			<Option target="Minishell"/>
 		</Unit>
+		<Unit filename="/home/humanbean/ecole42/Minishell/src/envp.c">
+			<Option target="Minishell"/>
+		</Unit>
 		<Unit filename="/home/humanbean/ecole42/Minishell/src/error.c">
 			<Option target="Minishell"/>
 		</Unit>
@@ -296,6 +299,9 @@
 			<Option target="Minishell"/>
 		</Unit>
 		<Unit filename="/home/humanbean/ecole42/Minishell/src/get_next_line.c">
+			<Option target="Minishell"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/Minishell/src/homeresonance.c">
 			<Option target="Minishell"/>
 		</Unit>
 		<Unit filename="/home/humanbean/ecole42/Minishell/src/main.c">

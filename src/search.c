@@ -37,21 +37,22 @@ char *home_search(char **envp)
 	int i;
 
 	i = 0;
-	while (envp[i] && ft_strccmp(envp[i], "HOME", '=' != 0))
+	while (envp[i] && ft_strccmp(envp[i], "HOME", '=' != 0)) {
 		i++;
+	}
 	if (envp[i])
-		return (ft_strrchr(envp[i], '=') + 1);
+		return (ft_strchr(envp[i], '=') + 1);
 	return (NULL);
 }
 
-char *pwd_search(char **envp)
+int  envp_search(char *to_find, char **envp)
 {
 	int i;
 
 	i = 0;
-	while (envp[i] && ft_strccmp(envp[i], "PWD", '=' != 0))
+	while (envp[i] && ft_strccmp(envp[i], to_find, '=' != 0))
 		i++;
 	if (envp[i])
-		return (ft_strrchr(envp[i], '=') + 1);
-	return (NULL);
+		return (i);
+	return (-1);
 }

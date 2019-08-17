@@ -1,6 +1,16 @@
 #include "minishell.h"
 
-int     ar_len(char **command)
+void    update_pwd(char **envp)
+{
+	int     i;
+	char    buf[1024];
+
+	i = envp_search("PWD", envp);
+	ft_strdel(&envp[i]);
+	envp[i] = ft_strjoin("PWD=", ft_strdup(getcwd(buf, 1024)));
+}
+
+int     cd_len(char **command)
 {
 	int len;
 
@@ -17,15 +27,16 @@ int     ar_len(char **command)
 	return (2);
 }
 
-void    cd(char **command, char *home)
+void cd(char **command, char *home, char **envp)
 {
 	int len;
 
-	len = ar_len(command);
+	len = cd_len(command);
 	if (!len)
 		return ;
 	else if (len == 1)
 		chdir(home);
 	else if (chdir(command[1]) < 0)
 		chdir_error(command[1]);
+	update_pwd(envp);
 }

@@ -889,9 +889,22 @@ CMakeFiles/Minishell.dir/src/split.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Minishell.dir/src/split.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/humanbean/ecole42/Minishell/src/split.c -o CMakeFiles/Minishell.dir/src/split.c.s
 
+CMakeFiles/Minishell.dir/src/envp.c.o: CMakeFiles/Minishell.dir/flags.make
+CMakeFiles/Minishell.dir/src/envp.c.o: ../src/envp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/Minishell.dir/src/envp.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Minishell.dir/src/envp.c.o   -c /home/humanbean/ecole42/Minishell/src/envp.c
+
+CMakeFiles/Minishell.dir/src/envp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Minishell.dir/src/envp.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/humanbean/ecole42/Minishell/src/envp.c > CMakeFiles/Minishell.dir/src/envp.c.i
+
+CMakeFiles/Minishell.dir/src/envp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Minishell.dir/src/envp.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/humanbean/ecole42/Minishell/src/envp.c -o CMakeFiles/Minishell.dir/src/envp.c.s
+
 CMakeFiles/Minishell.dir/src/change_dir.c.o: CMakeFiles/Minishell.dir/flags.make
 CMakeFiles/Minishell.dir/src/change_dir.c.o: ../src/change_dir.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/Minishell.dir/src/change_dir.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/Minishell.dir/src/change_dir.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Minishell.dir/src/change_dir.c.o   -c /home/humanbean/ecole42/Minishell/src/change_dir.c
 
 CMakeFiles/Minishell.dir/src/change_dir.c.i: cmake_force
@@ -902,9 +915,22 @@ CMakeFiles/Minishell.dir/src/change_dir.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Minishell.dir/src/change_dir.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/humanbean/ecole42/Minishell/src/change_dir.c -o CMakeFiles/Minishell.dir/src/change_dir.c.s
 
+CMakeFiles/Minishell.dir/src/homeresonance.c.o: CMakeFiles/Minishell.dir/flags.make
+CMakeFiles/Minishell.dir/src/homeresonance.c.o: ../src/homeresonance.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/Minishell.dir/src/homeresonance.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Minishell.dir/src/homeresonance.c.o   -c /home/humanbean/ecole42/Minishell/src/homeresonance.c
+
+CMakeFiles/Minishell.dir/src/homeresonance.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Minishell.dir/src/homeresonance.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/humanbean/ecole42/Minishell/src/homeresonance.c > CMakeFiles/Minishell.dir/src/homeresonance.c.i
+
+CMakeFiles/Minishell.dir/src/homeresonance.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Minishell.dir/src/homeresonance.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/humanbean/ecole42/Minishell/src/homeresonance.c -o CMakeFiles/Minishell.dir/src/homeresonance.c.s
+
 CMakeFiles/Minishell.dir/src/percent.c.o: CMakeFiles/Minishell.dir/flags.make
 CMakeFiles/Minishell.dir/src/percent.c.o: ../src/percent.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/Minishell.dir/src/percent.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/Minishell.dir/src/percent.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Minishell.dir/src/percent.c.o   -c /home/humanbean/ecole42/Minishell/src/percent.c
 
 CMakeFiles/Minishell.dir/src/percent.c.i: cmake_force
@@ -917,7 +943,7 @@ CMakeFiles/Minishell.dir/src/percent.c.s: cmake_force
 
 CMakeFiles/Minishell.dir/src/search.c.o: CMakeFiles/Minishell.dir/flags.make
 CMakeFiles/Minishell.dir/src/search.c.o: ../src/search.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/Minishell.dir/src/search.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/Minishell.dir/src/search.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Minishell.dir/src/search.c.o   -c /home/humanbean/ecole42/Minishell/src/search.c
 
 CMakeFiles/Minishell.dir/src/search.c.i: cmake_force
@@ -930,7 +956,7 @@ CMakeFiles/Minishell.dir/src/search.c.s: cmake_force
 
 CMakeFiles/Minishell.dir/src/free.c.o: CMakeFiles/Minishell.dir/flags.make
 CMakeFiles/Minishell.dir/src/free.c.o: ../src/free.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/Minishell.dir/src/free.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/Minishell.dir/src/free.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Minishell.dir/src/free.c.o   -c /home/humanbean/ecole42/Minishell/src/free.c
 
 CMakeFiles/Minishell.dir/src/free.c.i: cmake_force
@@ -943,7 +969,7 @@ CMakeFiles/Minishell.dir/src/free.c.s: cmake_force
 
 CMakeFiles/Minishell.dir/src/builtin.c.o: CMakeFiles/Minishell.dir/flags.make
 CMakeFiles/Minishell.dir/src/builtin.c.o: ../src/builtin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/Minishell.dir/src/builtin.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/Minishell.dir/src/builtin.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Minishell.dir/src/builtin.c.o   -c /home/humanbean/ecole42/Minishell/src/builtin.c
 
 CMakeFiles/Minishell.dir/src/builtin.c.i: cmake_force
@@ -956,7 +982,7 @@ CMakeFiles/Minishell.dir/src/builtin.c.s: cmake_force
 
 CMakeFiles/Minishell.dir/src/error.c.o: CMakeFiles/Minishell.dir/flags.make
 CMakeFiles/Minishell.dir/src/error.c.o: ../src/error.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/Minishell.dir/src/error.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/Minishell.dir/src/error.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Minishell.dir/src/error.c.o   -c /home/humanbean/ecole42/Minishell/src/error.c
 
 CMakeFiles/Minishell.dir/src/error.c.i: cmake_force
@@ -969,7 +995,7 @@ CMakeFiles/Minishell.dir/src/error.c.s: cmake_force
 
 CMakeFiles/Minishell.dir/src/get_next_line.c.o: CMakeFiles/Minishell.dir/flags.make
 CMakeFiles/Minishell.dir/src/get_next_line.c.o: ../src/get_next_line.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/Minishell.dir/src/get_next_line.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/Minishell.dir/src/get_next_line.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Minishell.dir/src/get_next_line.c.o   -c /home/humanbean/ecole42/Minishell/src/get_next_line.c
 
 CMakeFiles/Minishell.dir/src/get_next_line.c.i: cmake_force
@@ -982,7 +1008,7 @@ CMakeFiles/Minishell.dir/src/get_next_line.c.s: cmake_force
 
 CMakeFiles/Minishell.dir/src/main.c.o: CMakeFiles/Minishell.dir/flags.make
 CMakeFiles/Minishell.dir/src/main.c.o: ../src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/Minishell.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/Minishell.dir/src/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Minishell.dir/src/main.c.o   -c /home/humanbean/ecole42/Minishell/src/main.c
 
 CMakeFiles/Minishell.dir/src/main.c.i: cmake_force
@@ -1059,7 +1085,9 @@ Minishell_OBJECTS = \
 "CMakeFiles/Minishell.dir/libft/ft_tolower.c.o" \
 "CMakeFiles/Minishell.dir/libft/ft_toupper.c.o" \
 "CMakeFiles/Minishell.dir/src/split.c.o" \
+"CMakeFiles/Minishell.dir/src/envp.c.o" \
 "CMakeFiles/Minishell.dir/src/change_dir.c.o" \
+"CMakeFiles/Minishell.dir/src/homeresonance.c.o" \
 "CMakeFiles/Minishell.dir/src/percent.c.o" \
 "CMakeFiles/Minishell.dir/src/search.c.o" \
 "CMakeFiles/Minishell.dir/src/free.c.o" \
@@ -1135,7 +1163,9 @@ Minishell: CMakeFiles/Minishell.dir/libft/ft_strtrim.c.o
 Minishell: CMakeFiles/Minishell.dir/libft/ft_tolower.c.o
 Minishell: CMakeFiles/Minishell.dir/libft/ft_toupper.c.o
 Minishell: CMakeFiles/Minishell.dir/src/split.c.o
+Minishell: CMakeFiles/Minishell.dir/src/envp.c.o
 Minishell: CMakeFiles/Minishell.dir/src/change_dir.c.o
+Minishell: CMakeFiles/Minishell.dir/src/homeresonance.c.o
 Minishell: CMakeFiles/Minishell.dir/src/percent.c.o
 Minishell: CMakeFiles/Minishell.dir/src/search.c.o
 Minishell: CMakeFiles/Minishell.dir/src/free.c.o
@@ -1145,7 +1175,7 @@ Minishell: CMakeFiles/Minishell.dir/src/get_next_line.c.o
 Minishell: CMakeFiles/Minishell.dir/src/main.c.o
 Minishell: CMakeFiles/Minishell.dir/build.make
 Minishell: CMakeFiles/Minishell.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Linking C executable Minishell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Linking C executable Minishell"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Minishell.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

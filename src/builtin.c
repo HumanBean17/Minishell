@@ -35,7 +35,7 @@ void    run_process(char *command, char **argv, char **envp)
 	}
 }
 
-int builtin(char **split, char **envp)
+int builtin(char **split, char ***envp)
 {
 	int     i;
 	int     j;
@@ -43,24 +43,33 @@ int builtin(char **split, char **envp)
 	char    **command;
 
 	i = 0;
-	path = path_split(envp);
+	path = path_split(*envp);
 	while (split[i])
 	{
 		command = ft_strsplit(split[i], ' ');
 		if (!command[0])
 			return (1);
-		else if (!ft_strcmp(command[0], "cd"))
-			cd(command, home_search(envp));
-		else if (!ft_strcmp(command[0], "exit"))
+		home_set(command, *envp);
+		if (ft_strequ(command[0], "cd"))
+			cd(command, home_search(*envp), *envp);
+		else if (ft_strequ(command[0], "setenv"))
+		{
+			*envp = set_env(command, *envp);
+		}
+		//else if (ft_strequ(command[0], "unsetenv"))
+		//	unset_env(envp);
+		else if (ft_strequ(command[0], "env"))
+			print_env(*envp);
+		else if (ft_strequ(command[0], "exit"))
 			return (0);
 		else
 		{
-			percent(command, envp);
+			percent(command, *envp);
 			j = bin_search(command[0], path);
 			if (j >= 0)
-				split_process(j, command, path[j], envp);
+				split_process(j, command, path[j], *envp);
 			else if (j == -2)
-				split_process(j, command, command[0], envp);
+				split_process(j, command, command[0], *envp);
 		}
 		free_char_arr(command);
 		i++;
