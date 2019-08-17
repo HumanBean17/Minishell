@@ -1,12 +1,12 @@
 #include "minishell.h"
 
-void    home_set(char **command, char **envp)
+void home_set(char **command)
 {
 	int     i;
 	char    *home;
 	char    *tmp;
 
-	home = ft_strdup(home_search(envp));
+	home = ft_strdup(home_search());
 	i = 0;
 	while (command[i])
 	{

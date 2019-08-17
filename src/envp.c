@@ -10,37 +10,35 @@ int     ar_len(char **ar)
 	return (len);
 }
 
-void print_env(char **envp)
+void print_env()
 {
 	int i;
 
 	i = 0;
-	while (envp[i])
+	while (g_envp[i])
 	{
-		ft_putstr(envp[i]);
+		ft_putstr(g_envp[i]);
 		write(1, "\n", 1);
 		i++;
 	}
 }
 
-char **realloc_env(char **envp, char **command)
+char **realloc_env(char **command)
 {
 	int     len;
 	int     i;
 	char    **env;
 
 	i = 0;
-	len = ar_len(envp);
+	len = ar_len(g_envp);
 	env = (char **)malloc((sizeof(char *) * len) + 2);
-	while (envp[i] && i < len)
+	while (g_envp[i] && i < len)
 	{
-		env[i] = ft_strdup(envp[i]);
-		printf("%s\n", env[i]);
-		//ft_strdel(&envp[i]);
+		env[i] = ft_strdup(g_envp[i]);
 		i++;
 	}
-	ft_putstr("here\n");
-	free(envp);
+	//ft_putstr("here\n");
+	free(g_envp);
 	if (!command[2])
 		env[len] = ft_strjoin(command[1], "=");
 	env[len + 1] = NULL;
@@ -65,7 +63,7 @@ char    **cp_env(char **envp)
 	return (env);
 }
 
-char **set_env(char **command, char **envp)
+char **set_env(char **command)
 {
 	int     command_len;
 	char    **env;
@@ -77,11 +75,11 @@ char **set_env(char **command, char **envp)
 	}
 	else if (command_len == 2)
 	{
-		if (envp_search(command[1], envp) < 0)
+		if (envp_search(command[1]) < 0)
 		{
-			env = realloc_env(envp, command);
+			env = realloc_env(command);
 			return (env);
 		}
 	}
-	return (envp);
+	return (g_envp);
 }

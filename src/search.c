@@ -32,27 +32,27 @@ int   bin_search(char *command, char **path)
 	return (-1);
 }
 
-char *home_search(char **envp)
+char *home_search()
 {
 	int i;
 
 	i = 0;
-	while (envp[i] && ft_strccmp(envp[i], "HOME", '=' != 0)) {
+	while (g_envp[i] && ft_strccmp(g_envp[i], "HOME", '=' != 0)) {
 		i++;
 	}
-	if (envp[i])
-		return (ft_strchr(envp[i], '=') + 1);
+	if (g_envp[i])
+		return (ft_strchr(g_envp[i], '=') + 1);
 	return (NULL);
 }
 
-int  envp_search(char *to_find, char **envp)
+int envp_search(char *to_find)
 {
 	int i;
 
 	i = 0;
-	while (envp[i] && ft_strccmp(envp[i], to_find, '=' != 0))
+	while (g_envp[i] && ft_strccmp(g_envp[i], to_find, '=' != 0))
 		i++;
-	if (envp[i])
+	if (g_envp[i])
 		return (i);
 	return (-1);
 }

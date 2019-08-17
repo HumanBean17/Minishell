@@ -1,13 +1,13 @@
 #include "minishell.h"
 
-void    update_pwd(char **envp)
+void update_pwd(void)
 {
 	int     i;
 	char    buf[1024];
 
-	i = envp_search("PWD", envp);
-	ft_strdel(&envp[i]);
-	envp[i] = ft_strjoin("PWD=", ft_strdup(getcwd(buf, 1024)));
+	i = envp_search("PWD");
+	ft_strdel(&g_envp[i]);
+	g_envp[i] = ft_strjoin("PWD=", ft_strdup(getcwd(buf, 1024)));
 }
 
 int     cd_len(char **command)
@@ -27,7 +27,7 @@ int     cd_len(char **command)
 	return (2);
 }
 
-void cd(char **command, char *home, char **envp)
+void cd(char **command, char *home)
 {
 	int len;
 
@@ -38,5 +38,5 @@ void cd(char **command, char *home, char **envp)
 		chdir(home);
 	else if (chdir(command[1]) < 0)
 		chdir_error(command[1]);
-	update_pwd(envp);
+	update_pwd();
 }

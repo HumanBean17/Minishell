@@ -12,7 +12,7 @@ int     ft_strccmp(const char *s1, const char *s2, char c)
 	return ((int)((unsigned const char)s1[i] - (unsigned const char)s2[i]));
 }
 
-int    percent(char **command, char **envp)
+int percent(char **command)
 {
 	int i;
 	int j;
@@ -23,12 +23,12 @@ int    percent(char **command, char **envp)
 		j = 0;
 		if (command[i][0] == '$')
 		{
-			while (envp[j] && ft_strccmp(envp[j], command[i] + 1, '=') != 0)
+			while (g_envp[j] && ft_strccmp(g_envp[j], command[i] + 1, '=') != 0)
 				j++;
-			if (envp[j] && ft_strccmp(envp[j], command[i] + 1, '=') == 0)
+			if (g_envp[j] && ft_strccmp(g_envp[j], command[i] + 1, '=') == 0)
 			{
 				ft_strdel(&command[i]);
-				command[i] = ft_strdup(ft_strchr(envp[j], '=') + 1);
+				command[i] = ft_strdup(ft_strchr(g_envp[j], '=') + 1);
 			}
 		}
 		i++;

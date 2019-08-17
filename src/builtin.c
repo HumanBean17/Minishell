@@ -12,7 +12,7 @@ void    print(char **ar)
 	}
 }
 
-void    run_process(char *command, char **argv, char **envp)
+void run_process(char *command, char **argv)
 {
 	pid_t   pid;
 	pid_t   p_pid;
@@ -21,7 +21,7 @@ void    run_process(char *command, char **argv, char **envp)
 	pid = fork();
 	if (pid == 0)
 	{
-		if (execve(command, argv, envp) == -1)
+		if (execve(command, argv, g_envp) == -1)
 			exec_error(command);
 		kill(pid, SIGKILL);
 	}
@@ -35,7 +35,7 @@ void    run_process(char *command, char **argv, char **envp)
 	}
 }
 
-int builtin(char **split, char ***envp)
+int builtin(char **split)
 {
 	int     i;
 	int     j;
@@ -43,33 +43,33 @@ int builtin(char **split, char ***envp)
 	char    **command;
 
 	i = 0;
-	path = path_split(*envp);
+	path = path_split();
 	while (split[i])
 	{
 		command = ft_strsplit(split[i], ' ');
 		if (!command[0])
 			return (1);
-		home_set(command, *envp);
+		home_set(command);
 		if (ft_strequ(command[0], "cd"))
-			cd(command, home_search(*envp), *envp);
+			cd(command, home_search());
 		else if (ft_strequ(command[0], "setenv"))
 		{
-			*envp = set_env(command, *envp);
+			g_envp = set_env(command);
 		}
 		//else if (ft_strequ(command[0], "unsetenv"))
 		//	unset_env(envp);
 		else if (ft_strequ(command[0], "env"))
-			print_env(*envp);
+			print_env();
 		else if (ft_strequ(command[0], "exit"))
 			return (0);
 		else
 		{
-			percent(command, *envp);
+			percent(command);
 			j = bin_search(command[0], path);
 			if (j >= 0)
-				split_process(j, command, path[j], *envp);
+				split_process(j, command, path[j]);
 			else if (j == -2)
-				split_process(j, command, command[0], *envp);
+				split_process(j, command, command[0]);
 		}
 		free_char_arr(command);
 		i++;

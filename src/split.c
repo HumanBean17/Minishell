@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-void    split_process(int j, char **argv, char *path, char **envp)
+void split_process(int j, char **argv, char *path)
 {
 	char *run;
 	char *fcknslash;
@@ -11,30 +11,30 @@ void    split_process(int j, char **argv, char *path, char **envp)
 		run = ft_strjoin(path, fcknslash);
 		ft_strdel(&fcknslash);
 		set_zero(argv);
-		run_process(run, argv, envp);
+		run_process(run, argv);
 		ft_strdel(&run);
 	}
 	else
 	{
-		run_process(path, argv, envp);
+		run_process(path, argv);
 	}
 }
 
-char    **path_split(char **envp)
+char **path_split()
 {
 	int     i;
 	char    *tmp;
 	char    **path;
 
 	i = 0;
-	while (envp[i])
+	while (g_envp[i])
 	{
-		if (envp[i][0] == 'P' && envp[i][1] == 'A' &&
-		    envp[i][2] == 'T' && envp[i][3] == 'H')
+		if (g_envp[i][0] == 'P' && g_envp[i][1] == 'A' &&
+		    g_envp[i][2] == 'T' && g_envp[i][3] == 'H')
 			break;
 		i++;
 	}
-	tmp = ft_strsub(envp[i], 5, ft_strlen(envp[i]) - 4);
+	tmp = ft_strsub(g_envp[i], 5, ft_strlen(g_envp[i]) - 4);
 	path = ft_strsplit(tmp, ':');
 	ft_strdel(&tmp);
 	return (path);
