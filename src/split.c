@@ -34,6 +34,13 @@ char **path_split()
 			break;
 		i++;
 	}
+	if (!g_envp[i])
+	{
+		path = (char **)ft_memalloc(2);
+		path[0] = ft_strdup("/");
+		path[1] = NULL;
+		return (path);
+	}
 	tmp = ft_strsub(g_envp[i], 5, ft_strlen(g_envp[i]) - 4);
 	path = ft_strsplit(tmp, ':');
 	ft_strdel(&tmp);

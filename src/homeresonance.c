@@ -7,6 +7,8 @@ void home_set(char **command)
 	char    *tmp;
 
 	home = ft_strdup(home_search());
+	if (!home)
+		return ;
 	i = 0;
 	while (command[i])
 	{

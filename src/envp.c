@@ -61,7 +61,6 @@ char    **cp_env(char **envp)
 	i = 0;
 	len = ar_len(envp);
 	env = (char **)malloc(sizeof(char *) * len + 1);
-	//ft_memset(env, 0, len + 1);
 	while (envp[i])
 	{
 		env[i] = ft_strdup(envp[i]);
