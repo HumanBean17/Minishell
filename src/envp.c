@@ -61,6 +61,7 @@ char    **cp_env(char **envp)
 	i = 0;
 	len = ar_len(envp);
 	env = (char **)malloc(sizeof(char *) * len + 1);
+	//ft_memset(env, 0, len + 1);
 	while (envp[i])
 	{
 		env[i] = ft_strdup(envp[i]);
@@ -85,7 +86,7 @@ char    **del_elem(char *to_del)
 	{
 		if (!ft_strequ(g_envp[i], to_del))
 		{
-			env[j] = ft_strdup(ft_strdup(g_envp[i]));
+			env[j] = ft_strdup(g_envp[i]);
 			j++;
 		}
 		ft_strdel(&g_envp[i]);
