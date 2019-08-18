@@ -39,7 +39,7 @@ static void		ft_content_join(void **content, char buf[])
 	ft_strdel(&s);
 }
 
-static int		ft_call(t_list **begin, t_list *tmp, char **line)
+static int		ft_call(int fd, t_list **begin, t_list *tmp, char **line)
 {
 	char	*s;
 	int		len;
@@ -56,6 +56,8 @@ static int		ft_call(t_list **begin, t_list *tmp, char **line)
 	ft_memdel(&(tmp->content));
 	tmp->content = s[0] == '\n' ? ft_strsub(s, len + 1,
 			ft_strlen(s)) : ft_strsub(s, len, ft_strlen(s));
+	if (fd == 0)
+		ft_lstdelone(begin, tmp);
 	ft_strdel(&s);
 	return (1);
 }
@@ -83,7 +85,7 @@ int				get_next_line(const int fd, char **line)
 	}
 	if ((tmp = ft_list_find(list, fd)))
 	{
-		if (ft_call(&list, tmp, line) == 1)
+		if (ft_call(fd, &list, tmp, line) == 1)
 			return (1);
 	}
 	return (0);

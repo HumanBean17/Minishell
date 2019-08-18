@@ -12,13 +12,13 @@ LIBFT_A = libft/libft.a
 
 NAME = minishell
 
-all: $(NAME) $(SRC)
+all: $(NAME) $(OBJ)
 
-$(NAME):
-	make -C $(LIBFT)
+$(OBJ): $(SRC)
 	$(CC) -c $(HDR) $(SRC)
 
-$(SRC): $(OBJ)
+$(NAME): $(OBJ)
+	make -C $(LIBFT)
 	$(CC) $(HDR) $(SRC) -o $(NAME) $(LIBFT_A)
 
 clean:

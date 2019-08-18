@@ -53,15 +53,17 @@ int builtin(char **split)
 		if (ft_strequ(command[0], "cd"))
 			cd(command, home_search());
 		else if (ft_strequ(command[0], "setenv"))
-		{
-			g_envp = set_env(command);
-		}
-		//else if (ft_strequ(command[0], "unsetenv"))
-		//	unset_env(envp);
+			set_env(command);
+		else if (ft_strequ(command[0], "unsetenv"))
+			g_envp = unset_env(command);
 		else if (ft_strequ(command[0], "env"))
 			print_env();
 		else if (ft_strequ(command[0], "exit"))
+		{
+			free_char_arr(command);
+			free_char_arr(path);
 			return (0);
+		}
 		else
 		{
 			percent(command);

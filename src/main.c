@@ -1,5 +1,18 @@
 #include "minishell.h"
 
+void    print_ar(char **ar)
+{
+	int i;
+
+	i = 0;
+	while (ar[i])
+	{
+		printf("i = %d %s\n", i, ar[i]);
+		i++;
+	}
+	printf("-------\n");
+}
+
 void    promt(void)
 {
 	char pwd[1024];
@@ -19,11 +32,17 @@ int main(int argc, char **argv, char **envp)
 	while (1)
 	{
 		status = get_next_line(0, &line);
+		if (!status)
+		{
+			free_exit(split, line, 0);
+			ctrl_d();
+		}
 		split = ft_strsplit(line, ';');
 		if (!builtin(split))
+		{
+			free_exit(split, line, 1);
 			exit(0);
-		if (!status)
-			ctrl_d();
+		}
 		ft_strdel(&line);
 		free_char_arr(split);
 		promt();

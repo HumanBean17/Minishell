@@ -13,12 +13,14 @@ char    **g_envp;
 
 void    ctrl_d(void);
 void    set_zero(char **command);
+char ** unset_env(char **command);
 int     ar_len(char **ar);
 char    **cp_env(char **envp);
 void print_env();
-char **set_env(char **command);
+void set_env(char **command);
 char **realloc_env(char **command);
 int envp_search(char *to_find);
+void free_exit(char **split, char *line, int f);
 void    set_home(char **path, char *home);
 void home_set(char **command);
 void    chdir_error(char *command);

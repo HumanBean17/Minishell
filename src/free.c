@@ -7,8 +7,6 @@ void    free_char_arr(char **split)
 	i = 0;
 	while (split[i])
 	{
-		//ft_putstr(split[i]);
-		//write(1, "1\n", 2);
 		ft_strdel(&split[i]);
 		i++;
 	}
@@ -30,6 +28,16 @@ void    set_home(char **path, char *home)
 			ft_strdel(&tmp);
 		}
 		i++;
+	}
+}
+
+void free_exit(char **split, char *line, int f)
+{
+	free_char_arr(g_envp);
+	if (f == 1)
+	{
+		ft_strdel(&line);
+		free_char_arr(split);
 	}
 }
 
