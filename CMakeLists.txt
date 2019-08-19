@@ -80,6 +80,7 @@ add_executable(Minishell
         src/homeresonance.c
         src/percent.c
         src/search.c
+        src/signals.c
         src/free.c
         src/builtin.c
         src/error.c

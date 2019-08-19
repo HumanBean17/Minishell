@@ -68,6 +68,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Minishell.dir/src/homeresonance.c.o"
   "CMakeFiles/Minishell.dir/src/percent.c.o"
   "CMakeFiles/Minishell.dir/src/search.c.o"
+  "CMakeFiles/Minishell.dir/src/signals.c.o"
   "CMakeFiles/Minishell.dir/src/free.c.o"
   "CMakeFiles/Minishell.dir/src/builtin.c.o"
   "CMakeFiles/Minishell.dir/src/error.c.o"

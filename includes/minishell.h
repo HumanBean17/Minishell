@@ -11,6 +11,9 @@
 
 char    **g_envp;
 
+void	promt_sig_handle(int sg);
+void    sig_handle(int sg);
+void    promt(void);
 void    ctrl_d(void);
 void    set_zero(char **command);
 char ** unset_env(char **command);

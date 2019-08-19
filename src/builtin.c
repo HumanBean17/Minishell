@@ -1,17 +1,5 @@
 #include "minishell.h"
 
-void    print(char **ar)
-{
-	int i;
-
-	i = 0;
-	while (ar[i])
-	{
-		printf("%s\n", ar[i]);
-		i++;
-	}
-}
-
 void run_process(char *command, char **argv)
 {
 	pid_t   pid;
@@ -19,11 +7,12 @@ void run_process(char *command, char **argv)
 	int     status;
 
 	pid = fork();
+	signal(SIGINT, sig_handle);
 	if (pid == 0)
 	{
 		if (execve(command, argv, g_envp) == -1)
 			exec_error(command);
-		kill(pid, SIGKILL);
+
 	}
 	else if (pid < 0)
 		ft_putstr("Error forking\n");

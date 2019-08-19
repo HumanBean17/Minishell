@@ -2094,6 +2094,33 @@ src/search.c.s:
 	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/search.c.s
 .PHONY : src/search.c.s
 
+src/signals.o: src/signals.c.o
+
+.PHONY : src/signals.o
+
+# target to build an object file
+src/signals.c.o:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/signals.c.o
+.PHONY : src/signals.c.o
+
+src/signals.i: src/signals.c.i
+
+.PHONY : src/signals.i
+
+# target to preprocess a source file
+src/signals.c.i:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/signals.c.i
+.PHONY : src/signals.c.i
+
+src/signals.s: src/signals.c.s
+
+.PHONY : src/signals.s
+
+# target to generate assembly for a file
+src/signals.c.s:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/signals.c.s
+.PHONY : src/signals.c.s
+
 src/split.o: src/split.c.o
 
 .PHONY : src/split.o
@@ -2349,6 +2376,9 @@ help:
 	@echo "... src/search.o"
 	@echo "... src/search.i"
 	@echo "... src/search.s"
+	@echo "... src/signals.o"
+	@echo "... src/signals.i"
+	@echo "... src/signals.s"
 	@echo "... src/split.o"
 	@echo "... src/split.i"
 	@echo "... src/split.s"

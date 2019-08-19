@@ -313,6 +313,9 @@
 		<Unit filename="/home/humanbean/ecole42/Minishell/src/search.c">
 			<Option target="Minishell"/>
 		</Unit>
+		<Unit filename="/home/humanbean/ecole42/Minishell/src/signals.c">
+			<Option target="Minishell"/>
+		</Unit>
 		<Unit filename="/home/humanbean/ecole42/Minishell/src/split.c">
 			<Option target="Minishell"/>
 		</Unit>

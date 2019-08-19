@@ -8,9 +8,24 @@ void    ctrl_d(void)
 
 void    exec_error(char *command)
 {
-	ft_putstr("No such file or directory '");
-	ft_putstr(command);
-	ft_putstr("'\n");
+	if (access(command, X_OK) < 0)
+	{
+		ft_putstr("minishell: ");
+		ft_putstr(command);
+		ft_putstr(": Permission denied\n");
+	}
+	else if (access(command, F_OK) < 0)
+	{
+		ft_putstr("No such file or directory '");
+		ft_putstr(command);
+		ft_putstr("'\n");
+	}
+	else
+	{
+		ft_putstr("minishell: ");
+		ft_putstr(command);
+		ft_putstr(": Is a directory\n");
+	}
 	exit(0);
 }
 

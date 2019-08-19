@@ -1,23 +1,12 @@
 #include "minishell.h"
 
-void    print_ar(char **ar)
-{
-	int i;
-
-	i = 0;
-	while (ar[i])
-	{
-		printf("i = %d %s\n", i, ar[i]);
-		i++;
-	}
-	printf("-------\n");
-}
-
 void    promt(void)
 {
 	char pwd[1024];
 
+	ft_putstr("\x1b[33m");
 	ft_putstr(getcwd(pwd, 1024));
+	ft_putstr("\x1b[0m");
 	ft_putstr(":$> ");
 }
 
@@ -31,6 +20,7 @@ int main(int argc, char **argv, char **envp)
 	g_envp = cp_env(envp);
 	while (1)
 	{
+		signal(SIGINT, promt_sig_handle);
 		status = get_next_line(0, &line);
 		if (!status)
 		{
