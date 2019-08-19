@@ -8,17 +8,17 @@ void    ctrl_d(void)
 
 void    exec_error(char *command)
 {
-	if (access(command, X_OK) < 0)
+	if (access(command, F_OK) < 0)
+        {
+                ft_putstr("No such file or directory '");
+                ft_putstr(command);
+                ft_putstr("'\n");
+        }
+	else if (access(command, X_OK) < 0)
 	{
 		ft_putstr("minishell: ");
 		ft_putstr(command);
 		ft_putstr(": Permission denied\n");
-	}
-	else if (access(command, F_OK) < 0)
-	{
-		ft_putstr("No such file or directory '");
-		ft_putstr(command);
-		ft_putstr("'\n");
 	}
 	else
 	{
