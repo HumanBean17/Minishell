@@ -10,12 +10,19 @@ void    promt(void)
 	ft_putstr(":$> ");
 }
 
+int    justforflags(int argc, char **argv)
+{
+	argv[0] = NULL;
+	return (argc + 1);
+}
+
 int main(int argc, char **argv, char **envp)
 {
 	char *line;
 	char **split;
 	int status;
 
+	justforflags(argc, argv);
 	promt();
 	g_envp = cp_env(envp);
 	while (1)

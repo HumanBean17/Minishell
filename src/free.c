@@ -13,24 +13,6 @@ void    free_char_arr(char **split)
 	free(split);
 }
 
-void    set_home(char **path, char *home)
-{
-	int     i;
-	char    *tmp;
-
-	i = 0;
-	while (path[i])
-	{
-		if (path[i][0] == '~')
-		{
-			tmp = ft_strdup(path[i]);
-			path[i] = ft_strjoin(home, tmp);
-			ft_strdel(&tmp);
-		}
-		i++;
-	}
-}
-
 void free_exit(char **split, char *line, int f)
 {
 	free_char_arr(g_envp);

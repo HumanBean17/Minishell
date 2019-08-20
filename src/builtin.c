@@ -3,7 +3,6 @@
 void run_process(char *command, char **argv)
 {
 	pid_t   pid;
-	pid_t   p_pid;
 	int     status;
 
 	pid = fork();
@@ -18,9 +17,9 @@ void run_process(char *command, char **argv)
 		ft_putstr("Error forking\n");
 	else
 	{
-		p_pid = waitpid(pid, &status, WUNTRACED);
+		waitpid(pid, &status, WUNTRACED);
 		while (!WIFEXITED(status) && !WIFSIGNALED(status))
-			p_pid = waitpid(pid, &status, WUNTRACED);
+			waitpid(pid, &status, WUNTRACED);
 	}
 }
 
