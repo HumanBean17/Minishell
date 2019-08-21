@@ -75,13 +75,14 @@ char			**ft_strsplit(char const *s, char c)
 	{
 		i = skip_tabs(s, i, c);
 		j = skip_letter(s, i, c);
+		if (j == 0)
+			break ;
 		if (!(k[l++] = ft_strsub(s, i, j)))
-		{
-			ft_strdel(k);
 			return (NULL);
-		}
 		i += j;
 	}
+	if (word_count(s, c) == 0)
+		ft_strdel(&k[0]);
 	k[word_count(s, c)] = NULL;
 	return (k);
 }

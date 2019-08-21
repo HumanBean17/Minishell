@@ -7,7 +7,7 @@ void update_pwd(void)
 
 	i = envp_search("PWD");
 	ft_strdel(&g_envp[i]);
-	g_envp[i] = ft_strjoin("PWD=", ft_strdup(getcwd(buf, 1024)));
+	g_envp[i] = ft_strjoin("PWD=", getcwd(buf, 1024));
 }
 
 int     cd_len(char **command)

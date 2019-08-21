@@ -36,7 +36,11 @@ int builtin(char **split)
 	{
 		command = ft_strsplit(split[i], ' ');
 		if (!command[0])
+		{
+			free_char_arr(command);
+			free_char_arr(path);
 			return (1);
+		}
 		home_set(command);
 		if (ft_strequ(command[0], "cd"))
 			cd(command, home_search());
