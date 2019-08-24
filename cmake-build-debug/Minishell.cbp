@@ -319,6 +319,9 @@
 		<Unit filename="/home/humanbean/ecole42/Minishell/src/split.c">
 			<Option target="Minishell"/>
 		</Unit>
+		<Unit filename="/home/humanbean/ecole42/Minishell/src/split_whitespaces.c">
+			<Option target="Minishell"/>
+		</Unit>
 		<Unit filename="/home/humanbean/ecole42/Minishell/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -34,7 +34,7 @@ int builtin(char **split)
 	path = path_split();
 	while (split[i])
 	{
-		command = ft_strsplit(split[i], ' ');
+		command = split_whitespaces(split[i]);
 		if (!command[0])
 		{
 			free_char_arr(command);

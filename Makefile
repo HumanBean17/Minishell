@@ -9,7 +9,8 @@ SRC = src/builtin.c \
 	src/percent.c \
 	src/search.c \
 	src/signals.c \
-	src/split.c
+	src/split.c \
+	src/split_whitespaces.c
 
 OBJ = builtin.o \
 		change_dir.o \
@@ -22,11 +23,12 @@ OBJ = builtin.o \
 		percent.o \
 		search.o \
 		signals.o \
-		split.o
+		split.o \
+		split_whitespaces.o
 
 HDR = -I includes/
 
-CC = gcc -Wall -Wextra -Werror -g
+CC = gcc  -Wall -Wextra -Werror
 
 LIBFT = libft/
 
@@ -34,14 +36,16 @@ LIBFT_A = libft/libft.a
 
 NAME = minishell
 
-all: $(NAME) $(OBJ)
+all: LIB $(OBJ) $(NAME)
+
+LIB:
+	make -C $(LIBFT)
+
+$(NAME): $(OBJ)
+	$(CC) $(HDR) $(OBJ) -o $(NAME) $(LIBFT_A)
 
 $(OBJ): $(SRC)
 	$(CC) -c $(HDR) $(SRC)
-
-$(NAME): $(OBJ)
-	make -C $(LIBFT)
-	$(CC) $(HDR) $(SRC) -o $(NAME) $(LIBFT_A)
 
 clean:
 	make -C $(LIBFT) clean

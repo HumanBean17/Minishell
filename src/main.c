@@ -23,16 +23,21 @@ int main(int argc, char **argv, char **envp)
 	int status;
 
 	justforflags(argc, argv);
-	promt();
 	g_envp = cp_env(envp);
 	while (1)
 	{
+		promt();
 		signal(SIGINT, promt_sig_handle);
 		status = get_next_line(0, &line);
 		if (!status)
 		{
 			free_exit(split, line, 0);
 			ctrl_d();
+		}
+		if (line && line[0] == '\0')
+		{
+			ft_strdel(&line);
+			continue ;
 		}
 		split = ft_strsplit(line, ';');
 		if (!builtin(split))
@@ -42,6 +47,5 @@ int main(int argc, char **argv, char **envp)
 		}
 		ft_strdel(&line);
 		free_char_arr(split);
-		promt();
 	}
 }

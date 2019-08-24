@@ -75,6 +75,7 @@ add_executable(Minishell
         libft/ft_toupper.c
         libft/libft.h
         src/split.c
+        src/split_whitespaces.c
         src/envp.c
         src/change_dir.c
         src/homeresonance.c

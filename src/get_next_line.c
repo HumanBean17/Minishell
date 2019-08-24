@@ -47,7 +47,7 @@ static int		ft_call(int fd, t_list **begin, t_list *tmp, char **line)
 	s = ft_strdup(tmp->content);
 	len = s[0] == '\n' ? ft_end_len(s + 1) : ft_end_len(s);
 	*line = s[0] == '\n' ? ft_strsub(s, 1, len) : ft_strsub(s, 0, len);
-	if (s[1] == '\0' || s[0] == '\0')
+	if (s[0] != '\n' && (s[0] == '\0' || s[1] == '\0'))
 	{
 		ft_strdel(&s);
 		ft_lstdelone(begin, tmp);

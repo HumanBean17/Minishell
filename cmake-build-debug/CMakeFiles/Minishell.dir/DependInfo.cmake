@@ -79,6 +79,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/humanbean/ecole42/Minishell/src/search.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/search.c.o"
   "/home/humanbean/ecole42/Minishell/src/signals.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/signals.c.o"
   "/home/humanbean/ecole42/Minishell/src/split.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/split.c.o"
+  "/home/humanbean/ecole42/Minishell/src/split_whitespaces.c" "/home/humanbean/ecole42/Minishell/cmake-build-debug/CMakeFiles/Minishell.dir/src/split_whitespaces.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

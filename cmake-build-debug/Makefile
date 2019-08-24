@@ -2148,6 +2148,33 @@ src/split.c.s:
 	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/split.c.s
 .PHONY : src/split.c.s
 
+src/split_whitespaces.o: src/split_whitespaces.c.o
+
+.PHONY : src/split_whitespaces.o
+
+# target to build an object file
+src/split_whitespaces.c.o:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/split_whitespaces.c.o
+.PHONY : src/split_whitespaces.c.o
+
+src/split_whitespaces.i: src/split_whitespaces.c.i
+
+.PHONY : src/split_whitespaces.i
+
+# target to preprocess a source file
+src/split_whitespaces.c.i:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/split_whitespaces.c.i
+.PHONY : src/split_whitespaces.c.i
+
+src/split_whitespaces.s: src/split_whitespaces.c.s
+
+.PHONY : src/split_whitespaces.s
+
+# target to generate assembly for a file
+src/split_whitespaces.c.s:
+	$(MAKE) -f CMakeFiles/Minishell.dir/build.make CMakeFiles/Minishell.dir/src/split_whitespaces.c.s
+.PHONY : src/split_whitespaces.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2382,6 +2409,9 @@ help:
 	@echo "... src/split.o"
 	@echo "... src/split.i"
 	@echo "... src/split.s"
+	@echo "... src/split_whitespaces.o"
+	@echo "... src/split_whitespaces.i"
+	@echo "... src/split_whitespaces.s"
 .PHONY : help
 
 

@@ -63,6 +63,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Minishell.dir/libft/ft_tolower.c.o"
   "CMakeFiles/Minishell.dir/libft/ft_toupper.c.o"
   "CMakeFiles/Minishell.dir/src/split.c.o"
+  "CMakeFiles/Minishell.dir/src/split_whitespaces.c.o"
   "CMakeFiles/Minishell.dir/src/envp.c.o"
   "CMakeFiles/Minishell.dir/src/change_dir.c.o"
   "CMakeFiles/Minishell.dir/src/homeresonance.c.o"
